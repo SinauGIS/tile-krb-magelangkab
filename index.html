@@ -60,7 +60,14 @@
         maxZoom: 18,
 		opacity: 0.8,
         tms: false,
-      }).addTo(map);
+      });
+
+    var kbhl = L.tileLayer('https://sinaugis.github.io/tile-krb-magelangkab/bahaya/kekeringan/{z}/{x}/{y}.png', {
+        minZoom: 8,
+        maxZoom: 18,
+		opacity: 0.8,
+        tms: false,
+      });
 	  
 	  /* var baseMaps = {
 		"OpenStreetMap": OpenStreetMap_Mapnik,
@@ -71,6 +78,7 @@
 		"Bahaya Cuaca Ekstrim" : bahayacueks,
 		"Bahaya Letusan Gunungapi" : letusangunungapi,
 		"Bahaya Kebakaran Hutan dan Lahan" : kbhl,
+    "Bahaya Kekeringan" : kekeringan,
 	  };
 	  
 	  L.control.layers(null, overlayMaps, {collapsed: false}).addTo(map);
