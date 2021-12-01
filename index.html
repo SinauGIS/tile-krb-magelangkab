@@ -68,6 +68,13 @@
 		opacity: 0.8,
         tms: false,
       });
+
+    var gempabumi = L.tileLayer('https://sinaugis.github.io/tile-krb-magelangkab/bahaya/gempabumi/{z}/{x}/{y}.png', {
+        minZoom: 8,
+        maxZoom: 18,
+		opacity: 0.8,
+        tms: false,
+      });
 	  
 	  /* var baseMaps = {
 		"OpenStreetMap": OpenStreetMap_Mapnik,
@@ -76,9 +83,10 @@
 	  var overlayMaps = {
 		"Bahaya Longsor": bahayalongsor,
 		"Bahaya Cuaca Ekstrim" : bahayacueks,
-		"Bahaya Letusan Gunungapi" : letusangunungapi,
+    "Bahaya Gempabumi" : gempabumi,
 		"Bahaya Kebakaran Hutan dan Lahan" : kbhl,
     "Bahaya Kekeringan" : kekeringan,
+    "Bahaya Letusan Gunungapi" : letusangunungapi,
 	  };
 	  
 	  L.control.layers(null, overlayMaps, {collapsed: false}).addTo(map);
