@@ -76,6 +76,13 @@
         tms: false,
       });
 	  
+	var banjir = L.tileLayer('https://sinaugis.github.io/tile-krb-magelangkab/bahaya/banjir/{z}/{x}/{y}.png', {
+        minZoom: 8,
+        maxZoom: 18,
+		opacity: 0.8,
+        tms: false,
+      });
+	  
 	var banjirbandang = L.tileLayer('https://sinaugis.github.io/tile-krb-magelangkab/bahaya/banjir-bandang/{z}/{x}/{y}.png', {
         minZoom: 8,
         maxZoom: 18,
@@ -94,6 +101,7 @@
 		"Bahaya Kebakaran Hutan dan Lahan" : kbhl,
 		"Bahaya Kekeringan" : kekeringan,
 		"Bahaya Letusan Gunungapi" : letusangunungapi,
+		"Bahaya Banjir" : banjir,
 		"Bahaya Banjir Bandang" : banjirbandang,
 	  };
 	  
