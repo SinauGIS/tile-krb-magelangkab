@@ -34,14 +34,14 @@
 	  }).addTo(map);
 	  
 	  //Layer
-      var bahayalongsor = L.tileLayer('https://sinaugis.github.io/tile-krb-magelangkab/bahaya/longsor/{z}/{x}/{y}.png', {
+	  var bahayabanjir = L.tileLayer('https://sinaugis.github.io/tile-krb-magelangkab/bahaya/banjir/{z}/{x}/{y}.png', {
         minZoom: 8,
         maxZoom: 18,
 		opacity: 0.8,
         tms: false,
       });
 	  
-	  var letusangunungapi = L.tileLayer('https://sinaugis.github.io/tile-krb-magelangkab/bahaya/letusan-gunungapi/{z}/{x}/{y}.png', {
+	  var bahayabanjirbandang = L.tileLayer('https://sinaugis.github.io/tile-krb-magelangkab/bahaya/banjir-bandang/{z}/{x}/{y}.png', {
         minZoom: 8,
         maxZoom: 18,
 		opacity: 0.8,
@@ -55,35 +55,37 @@
         tms: false,
       }).addTo(map);
 	  
-	  var kbhl = L.tileLayer('https://sinaugis.github.io/tile-krb-magelangkab/bahaya/kebakaran-hutan-lahan/{z}/{x}/{y}.png', {
-        minZoom: 8,
-        maxZoom: 18,
-		opacity: 0.8,
-        tms: false,
-      });
-
-    var kekeringan = L.tileLayer('https://sinaugis.github.io/tile-krb-magelangkab/bahaya/kekeringan/{z}/{x}/{y}.png', {
-        minZoom: 8,
-        maxZoom: 18,
-		opacity: 0.8,
-        tms: false,
-      });
-
-    var gempabumi = L.tileLayer('https://sinaugis.github.io/tile-krb-magelangkab/bahaya/gempabumi/{z}/{x}/{y}.png', {
+	  var bahayagempabumi = L.tileLayer('https://sinaugis.github.io/tile-krb-magelangkab/bahaya/gempabumi/{z}/{x}/{y}.png', {
         minZoom: 8,
         maxZoom: 18,
 		opacity: 0.8,
         tms: false,
       });
 	  
-	var banjir = L.tileLayer('https://sinaugis.github.io/tile-krb-magelangkab/bahaya/banjir/{z}/{x}/{y}.png', {
+	  var bahayakbhl = L.tileLayer('https://sinaugis.github.io/tile-krb-magelangkab/bahaya/kebakaran-hutan-lahan/{z}/{x}/{y}.png', {
         minZoom: 8,
         maxZoom: 18,
 		opacity: 0.8,
         tms: false,
       });
-	  
-	var banjirbandang = L.tileLayer('https://sinaugis.github.io/tile-krb-magelangkab/bahaya/banjir-bandang/{z}/{x}/{y}.png', {
+
+      var bahayakekeringan = L.tileLayer('https://sinaugis.github.io/tile-krb-magelangkab/bahaya/kekeringan/{z}/{x}/{y}.png', {
+        minZoom: 8,
+        maxZoom: 18,
+		opacity: 0.8,
+        tms: false,
+      });
+
+
+	
+	  var bahayaletusangunungapi = L.tileLayer('https://sinaugis.github.io/tile-krb-magelangkab/bahaya/letusan-gunungapi/{z}/{x}/{y}.png', {
+        minZoom: 8,
+        maxZoom: 18,
+		opacity: 0.8,
+        tms: false,
+      });
+
+      var bahayalongsor = L.tileLayer('https://sinaugis.github.io/tile-krb-magelangkab/bahaya/longsor/{z}/{x}/{y}.png', {
         minZoom: 8,
         maxZoom: 18,
 		opacity: 0.8,
@@ -95,14 +97,14 @@
 	  }; */
 
 	  var overlayMaps = {
-		"Bahaya Longsor": bahayalongsor,
+		"Bahaya Banjir" : bahayabanjir,
+		"Bahaya Banjir Bandang" : bahayabanjirbandang,
 		"Bahaya Cuaca Ekstrim" : bahayacueks,
-		"Bahaya Gempabumi" : gempabumi,
-		"Bahaya Kebakaran Hutan dan Lahan" : kbhl,
-		"Bahaya Kekeringan" : kekeringan,
-		"Bahaya Letusan Gunungapi" : letusangunungapi,
-		"Bahaya Banjir" : banjir,
-		"Bahaya Banjir Bandang" : banjirbandang,
+		"Bahaya Gempabumi" : bahayagempabumi,
+		"Bahaya Kebakaran Hutan dan Lahan" : bahayakbhl,
+		"Bahaya Kekeringan" : bahayakekeringan,
+		"Bahaya Letusan Gunungapi" : bahayaletusangunungapi,
+		"Bahaya Longsor": bahayalongsor,
 	  };
 	  
 	  L.control.layers(null, overlayMaps, {collapsed: false}).addTo(map);
